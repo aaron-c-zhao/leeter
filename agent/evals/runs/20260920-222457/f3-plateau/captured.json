@@ -1,0 +1,134 @@
+{
+ "fixture": "f3-plateau",
+ "plansAfter": [
+  {
+   "id": 2,
+   "createdAt": 1789936420292,
+   "horizonDays": 14,
+   "basedOn": 1,
+   "focus": "**Sliding windows, linked lists, and first DP.** Two weeks of new patterns: variable-width windows over strings, fast/slow pointers through linked lists, and your first recurrence problems — closing with a Hard window capstone.",
+   "notes": "Each block ramps inside one family — two window scans, three list problems, two DP problems — so every session adds a single new idea on top of a familiar technique.",
+   "items": [
+    {
+     "id": 5,
+     "lcId": 3,
+     "slug": "longest-substring-without-repeating-characters",
+     "reason": "Two-pointer work is 2/2 (digest), but both solved problems sat on sorted arrays. This is the first variable-width window over a string, testing the pointer discipline without the sorted-array shortcut.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 6,
+     "lcId": 424,
+     "slug": "longest-repeating-character-replacement",
+     "reason": "Second sliding-window step, adding a frequency map and an 'at most k replacements' condition. It reuses the hash-map fluency behind the 4/4 arrays-hashing record while forcing the window to shrink dynamically.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 7,
+     "lcId": 206,
+     "slug": "reverse-linked-list",
+     "reason": "First linked-list problem, deliberately Easy: establishes node and pointer mechanics in a new structure before cycles and carry arithmetic.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 8,
+     "lcId": 141,
+     "slug": "linked-list-cycle",
+     "reason": "Transfers the two-pointer skill (2/2) to linked lists — Floyd's fast/slow pointers are the list analogue of a pattern already owned.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 9,
+     "lcId": 2,
+     "slug": "add-two-numbers",
+     "reason": "Medium list problem pairing traversal with carry bookkeeping; the natural next step after reverse and cycle, adding digit-level state.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 10,
+     "lcId": 70,
+     "slug": "climbing-stairs",
+     "reason": "Entry point to dynamic programming, the largest untouched topic in the bank. Easy and self-contained, it introduces the recurrence-and-memo framing before array-shaped DP.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 11,
+     "lcId": 198,
+     "slug": "house-robber",
+     "reason": "First non-trivial recurrence: state depends on the previous two choices. Directly builds on Climbing Stairs and moves DP onto an array, matching your strongest data structure.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 12,
+     "lcId": 239,
+     "slug": "sliding-window-maximum",
+     "reason": "Capstone stretch — the bank's only Hard, and untouched. A monotonic deque generalizes the earlier window scans, giving a ceiling now that every attempted Easy and Medium has been solved.",
+     "status": "not_started",
+     "carriedFrom": null
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "createdAt": 1788868800000,
+   "horizonDays": 10,
+   "basedOn": null,
+   "focus": "Arrays and hashing week: the complement map family.",
+   "notes": null,
+   "items": [
+    {
+     "id": 1,
+     "lcId": 1,
+     "slug": "two-sum",
+     "reason": "complement map",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 2,
+     "lcId": 49,
+     "slug": "group-anagrams",
+     "reason": "hash map on strings",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 3,
+     "lcId": 15,
+     "slug": "3sum",
+     "reason": "two pointers",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 4,
+     "lcId": 167,
+     "slug": "two-sum-ii-input-array-is-sorted",
+     "reason": "sorted variant",
+     "status": "solved",
+     "carriedFrom": null
+    }
+   ]
+  }
+ ],
+ "memoryVersionsAfter": [
+  {
+   "body": "# Memory\n\n## Position\n- Plan 1 (arrays-hashing complement map, 10d, 4 items) is complete: digest shows solved=4, practiced=0, not_started=0, carried_unsolved=[].\n- Advanced to plan 2 (14d, 8 items, based_on=1): sliding window -> linked list -> first DP, with the bank's only Hard as a window capstone.\n\n## Why this block\n- Every practiced topic is at 100%: arrays-hashing 4/4, two-pointers 2/2, binary-search 1/1 (digest). Nothing to remediate, so targeting = untouched families + one difficulty step up, not more repetition of solved patterns.\n- Difficulty gradient: first exposure to linked lists is Easy (206, 141), then Medium (2); DP starts Easy (70) then Medium (198); the lone Hard (239) is a deliberate end-of-block stretch.\n- Pace check: plan 1 created 1788868800000, last session 1789473600000 -> 4 items in 7 days (~4/week). 8 items / 14 days matches that demonstrated pace; previous 10d/4-item plan was light relative to the user's throughput.\n\n## Open threads\n- No carries: all plan-1 items solved, so they are retired rather than carried (no carried_from in plan 2).\n- No paused/active sessions and none with planItemId=null; nothing outside the plan graph.\n- No completed reviews exist (all sessions reviewRequestStatus=null, reviewCount=0; pending queue empty) -> coaching dimension passes vacuously this cycle.\n- Reconcile: previous memory said \"keep building the same ladder\"; the digest contradicts it (ladder fully solved), so this version supersedes that instruction.\n\n## Next-run checks\n- Digest adherence on plan 2: any carried_unsolved, and solve_rate on sliding-window / linked-list / dynamic-programming topics.\n- Watch for the first completed reviews; if any appear, fold recommended_focus and weaknesses into plan 3 targeting.\n- Watch for the first linked-list session (206/141) for pointer bugs or copy-out-before-submit patterns; and whether 239 (Hard) is attempted and how it lands.\n- Bank still untouched for future blocks: stacks (20), trees (226, 19), heap (215), prefix-sum (238), plus coin-change (322) and best-time-to-buy-and-sell-stock (121) for DP follow-ups.",
+   "createdAt": 1789936433103,
+   "size": 2099
+  },
+  {
+   "body": "# Memory\n- Plan going well; all items solved.\n- Keep building the same ladder next week.",
+   "createdAt": 1789560000000,
+   "size": 88
+  }
+ ],
+ "currentMemoryAfter": "# Memory\n\n## Position\n- Plan 1 (arrays-hashing complement map, 10d, 4 items) is complete: digest shows solved=4, practiced=0, not_started=0, carried_unsolved=[].\n- Advanced to plan 2 (14d, 8 items, based_on=1): sliding window -> linked list -> first DP, with the bank's only Hard as a window capstone.\n\n## Why this block\n- Every practiced topic is at 100%: arrays-hashing 4/4, two-pointers 2/2, binary-search 1/1 (digest). Nothing to remediate, so targeting = untouched families + one difficulty step up, not more repetition of solved patterns.\n- Difficulty gradient: first exposure to linked lists is Easy (206, 141), then Medium (2); DP starts Easy (70) then Medium (198); the lone Hard (239) is a deliberate end-of-block stretch.\n- Pace check: plan 1 created 1788868800000, last session 1789473600000 -> 4 items in 7 days (~4/week). 8 items / 14 days matches that demonstrated pace; previous 10d/4-item plan was light relative to the user's throughput.\n\n## Open threads\n- No carries: all plan-1 items solved, so they are retired rather than carried (no carried_from in plan 2).\n- No paused/active sessions and none with planItemId=null; nothing outside the plan graph.\n- No completed reviews exist (all sessions reviewRequestStatus=null, reviewCount=0; pending queue empty) -> coaching dimension passes vacuously this cycle.\n- Reconcile: previous memory said \"keep building the same ladder\"; the digest contradicts it (ladder fully solved), so this version supersedes that instruction.\n\n## Next-run checks\n- Digest adherence on plan 2: any carried_unsolved, and solve_rate on sliding-window / linked-list / dynamic-programming topics.\n- Watch for the first completed reviews; if any appear, fold recommended_focus and weaknesses into plan 3 targeting.\n- Watch for the first linked-list session (206/141) for pointer bugs or copy-out-before-submit patterns; and whether 239 (Hard) is attempted and how it lands.\n- Bank still untouched for future blocks: stacks (20), trees (226, 19), heap (215), prefix-sum (238), plus coin-change (322) and best-time-to-buy-and-sell-stock (121) for DP follow-ups."
+}

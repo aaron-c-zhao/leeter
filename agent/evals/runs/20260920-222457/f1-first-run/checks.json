@@ -1,0 +1,60 @@
+{
+ "fixture": "f1-first-run",
+ "checks": [
+  {
+   "name": "plan_posted",
+   "pass": true,
+   "detail": "plans: 1 -> 2"
+  },
+  {
+   "name": "bank_lc_ids",
+   "dimension": 1,
+   "pass": true,
+   "detail": "all lc_ids exist in the bank"
+  },
+  {
+   "name": "based_on_chained",
+   "dimension": 1,
+   "pass": true,
+   "detail": "based_on=1, previous plan=1"
+  },
+  {
+   "name": "carried_from_valid",
+   "dimension": 1,
+   "pass": true,
+   "detail": "all carried_from target previous items"
+  },
+  {
+   "name": "carried_unsolved_addressed",
+   "dimension": 3,
+   "pass": true,
+   "detail": "0 carried item(s) carried or resolved"
+  },
+  {
+   "name": "horizon_item_bounds",
+   "dimension": 1,
+   "pass": true,
+   "detail": "7 items for a 14-day horizon"
+  },
+  {
+   "name": "focus_notes_hygiene",
+   "dimension": 6,
+   "pass": true,
+   "detail": "no process narration in focus/notes"
+  },
+  {
+   "name": "not_a_noop",
+   "dimension": 9,
+   "pass": true,
+   "detail": "item set differs from the previous plan"
+  },
+  {
+   "name": "memory_updated",
+   "dimension": 8,
+   "pass": true,
+   "detail": "memory versions: 0 -> 1"
+  }
+ ],
+ "passed": 9,
+ "total": 9
+}

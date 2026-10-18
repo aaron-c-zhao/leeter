@@ -1,0 +1,362 @@
+{
+ "fixture": "f4-stale-memory",
+ "fixtureDescription": "Stale memory: the notebook claims an open thread (a paused session) and a DP weakness that the ground truth shows resolved. The planner must reconcile memory with the digest, not copy it.",
+ "digest": {
+  "totals": {
+   "attempts": 2,
+   "solved": 2
+  },
+  "topics": [
+   {
+    "topic": "dynamic-programming",
+    "attempts": 2,
+    "solved": 2,
+    "solve_rate": 1,
+    "last_practiced_at": 1789300800000
+   },
+   {
+    "topic": "arrays-hashing",
+    "attempts": 1,
+    "solved": 1,
+    "solve_rate": 1,
+    "last_practiced_at": 1789300800000
+   },
+   {
+    "topic": "math-bit-manipulation",
+    "attempts": 1,
+    "solved": 1,
+    "solve_rate": 1,
+    "last_practiced_at": 1789128000000
+   }
+  ],
+  "current_plan": {
+   "id": 1,
+   "created_at": 1789041600000,
+   "horizon_days": 8,
+   "solved": 2,
+   "practiced": 0,
+   "not_started": 0,
+   "carried_unsolved": []
+  },
+  "taxonomy_version": 1
+ },
+ "sessions": [
+  {
+   "id": 2,
+   "problem": {
+    "id": 11,
+    "title": "house-robber",
+    "slug": "house-robber",
+    "difficulty": "Medium",
+    "tags": [
+     "array",
+     "dynamic-programming"
+    ]
+   },
+   "startedAt": 1789300800000,
+   "finishedAt": 1789302900000,
+   "activeMs": 1800000,
+   "status": "finished",
+   "outcome": "Accepted",
+   "reviewRequestStatus": null,
+   "reviewCount": 0,
+   "planItemId": 2
+  },
+  {
+   "id": 1,
+   "problem": {
+    "id": 7,
+    "title": "climbing-stairs",
+    "slug": "climbing-stairs",
+    "difficulty": "Easy",
+    "tags": [
+     "math",
+     "dynamic-programming",
+     "memoization"
+    ]
+   },
+   "startedAt": 1789128000000,
+   "finishedAt": 1789129800000,
+   "activeMs": 1500000,
+   "status": "finished",
+   "outcome": "Accepted",
+   "reviewRequestStatus": null,
+   "reviewCount": 0,
+   "planItemId": 1
+  }
+ ],
+ "plans": [
+  {
+   "id": 1,
+   "createdAt": 1789041600000,
+   "horizonDays": 8,
+   "focusMd": "Dynamic programming week.",
+   "notesMd": null,
+   "basedOn": null,
+   "items": [
+    {
+     "id": 1,
+     "planId": 1,
+     "lcId": 70,
+     "slug": "climbing-stairs",
+     "reasonMd": "DP entry point",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 2,
+     "planId": 1,
+     "lcId": 198,
+     "slug": "house-robber",
+     "reasonMd": "1-D DP",
+     "status": "solved",
+     "carriedFrom": null
+    }
+   ]
+  }
+ ],
+ "memory": {
+  "body": "# Memory\n- Open thread: the Three Sum session is paused mid-draft — resume it first.\n- dynamic-programming still weak; keep the ladder there.\n- User prefers one problem per day.",
+  "versionId": 1,
+  "updatedAt": 1789732800000
+ },
+ "memoryVersions": [
+  {
+   "body": "# Memory\n- Open thread: the Three Sum session is paused mid-draft — resume it first.\n- dynamic-programming still weak; keep the ladder there.\n- User prefers one problem per day.",
+   "createdAt": 1789732800000
+  }
+ ],
+ "bank": [
+  {
+   "id": 1,
+   "lcId": 1,
+   "title": "two-sum",
+   "slug": "two-sum",
+   "difficulty": "Easy",
+   "tags": [
+    "array",
+    "hash-table"
+   ]
+  },
+  {
+   "id": 2,
+   "lcId": 2,
+   "title": "add-two-numbers",
+   "slug": "add-two-numbers",
+   "difficulty": "Medium",
+   "tags": [
+    "linked-list",
+    "math"
+   ]
+  },
+  {
+   "id": 3,
+   "lcId": 3,
+   "title": "longest-substring-without-repeating-characters",
+   "slug": "longest-substring-without-repeating-characters",
+   "difficulty": "Medium",
+   "tags": [
+    "hash-table",
+    "string",
+    "sliding-window"
+   ]
+  },
+  {
+   "id": 4,
+   "lcId": 15,
+   "title": "3sum",
+   "slug": "3sum",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "two-pointers",
+    "sorting"
+   ]
+  },
+  {
+   "id": 5,
+   "lcId": 20,
+   "title": "valid-parentheses",
+   "slug": "valid-parentheses",
+   "difficulty": "Easy",
+   "tags": [
+    "string",
+    "stack"
+   ]
+  },
+  {
+   "id": 6,
+   "lcId": 49,
+   "title": "group-anagrams",
+   "slug": "group-anagrams",
+   "difficulty": "Medium",
+   "tags": [
+    "hash-table",
+    "string",
+    "sorting"
+   ]
+  },
+  {
+   "id": 7,
+   "lcId": 70,
+   "title": "climbing-stairs",
+   "slug": "climbing-stairs",
+   "difficulty": "Easy",
+   "tags": [
+    "math",
+    "dynamic-programming",
+    "memoization"
+   ]
+  },
+  {
+   "id": 8,
+   "lcId": 121,
+   "title": "best-time-to-buy-and-sell-stock",
+   "slug": "best-time-to-buy-and-sell-stock",
+   "difficulty": "Easy",
+   "tags": [
+    "array",
+    "dynamic-programming"
+   ]
+  },
+  {
+   "id": 9,
+   "lcId": 141,
+   "title": "linked-list-cycle",
+   "slug": "linked-list-cycle",
+   "difficulty": "Easy",
+   "tags": [
+    "hash-table",
+    "linked-list",
+    "two-pointers"
+   ]
+  },
+  {
+   "id": 10,
+   "lcId": 167,
+   "title": "two-sum-ii-input-array-is-sorted",
+   "slug": "two-sum-ii-input-array-is-sorted",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "two-pointers",
+    "binary-search"
+   ]
+  },
+  {
+   "id": 11,
+   "lcId": 198,
+   "title": "house-robber",
+   "slug": "house-robber",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "dynamic-programming"
+   ]
+  },
+  {
+   "id": 12,
+   "lcId": 206,
+   "title": "reverse-linked-list",
+   "slug": "reverse-linked-list",
+   "difficulty": "Easy",
+   "tags": [
+    "linked-list",
+    "recursion"
+   ]
+  },
+  {
+   "id": 13,
+   "lcId": 215,
+   "title": "kth-largest-element-in-an-array",
+   "slug": "kth-largest-element-in-an-array",
+   "difficulty": "Medium",
+   "tags": [
+    "heap",
+    "divide-and-conquer",
+    "sorting"
+   ]
+  },
+  {
+   "id": 14,
+   "lcId": 226,
+   "title": "invert-binary-tree",
+   "slug": "invert-binary-tree",
+   "difficulty": "Easy",
+   "tags": [
+    "tree",
+    "depth-first-search",
+    "breadth-first-search"
+   ]
+  },
+  {
+   "id": 15,
+   "lcId": 238,
+   "title": "product-of-array-except-self",
+   "slug": "product-of-array-except-self",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "prefix-sum"
+   ]
+  },
+  {
+   "id": 16,
+   "lcId": 239,
+   "title": "sliding-window-maximum",
+   "slug": "sliding-window-maximum",
+   "difficulty": "Hard",
+   "tags": [
+    "sliding-window",
+    "heap",
+    "monotonic-queue"
+   ]
+  },
+  {
+   "id": 17,
+   "lcId": 322,
+   "title": "coin-change",
+   "slug": "coin-change",
+   "difficulty": "Medium",
+   "tags": [
+    "dynamic-programming",
+    "breadth-first-search"
+   ]
+  },
+  {
+   "id": 18,
+   "lcId": 326,
+   "title": "power-of-three",
+   "slug": "power-of-three",
+   "difficulty": "Easy",
+   "tags": [
+    "math"
+   ]
+  },
+  {
+   "id": 19,
+   "lcId": 350,
+   "title": "two-sum-iv-input-is-a-bst",
+   "slug": "two-sum-iv-input-is-a-bst",
+   "difficulty": "Easy",
+   "tags": [
+    "hash-table",
+    "two-pointers",
+    "tree",
+    "depth-first-search"
+   ]
+  },
+  {
+   "id": 20,
+   "lcId": 424,
+   "title": "longest-repeating-character-replacement",
+   "slug": "longest-repeating-character-replacement",
+   "difficulty": "Medium",
+   "tags": [
+    "hash-table",
+    "string",
+    "sliding-window"
+   ]
+  }
+ ]
+}

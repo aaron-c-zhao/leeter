@@ -1,0 +1,20 @@
+## 1. Rubric & planning skill
+
+- [x] 1.1 Create `agent/planning-rubric.md`: the 9 dimensions (structural validity, grounding, ladder & thread continuity, targeting & progression, coaching integration, plan hygiene, reason quality, memory stewardship, efficiency) with 1–5 anchors per dimension, the evidence-citation rule for scores ≤ 3, a version marker, and worked examples referencing the digest/memory/plan payloads; verify the rubric reads self-contained against a sample digest + plan pair
+- [x] 1.2 Create the `leeter-plan` skill source (`agent/skills/leeter-plan/SKILL.md`, symlinked into `.opencode/skills/leeter-plan` for opencode to install): setup (LEETER_URL/TOKEN), the planning loop (digest → memory → bank discovery → coaching reads via session list + per-session reviews → POST plan with `based_on`/`carried_from` → memory PUT), quality guidance mapped to the rubric dimensions (three kinds of open work: carried items, paused/active sessions outside the plan graph, memory threads), and rules (append-only plans, no narration in focus/notes, token never in text); verify the skill mirrors `leeter-review`'s structure and references the rubric file
+- [x] 1.3 Move the skill source into the repo (`agent/skills/leeter-plan/SKILL.md`) with the `.opencode/skills/` install location as a symlink; migrate the existing `leeter-review` skill the same way; update all references (eval report fingerprint, AGENT_PROTOCOL, READMEs) to the repo path; verify the skill resolves through the symlink
+
+## 2. Eval harness
+
+- [x] 2.1 Build the scratch-instance scaffolding in `agent/evals/`: a seed helper that creates a temp SQLite db via `createDb`/`runMigrations`/drizzle, boots `createApp` on a temp port with `LEETCODE_SESSION=""` and a generated agent token, and prints the base URL/token for the run; verify one fixture boots and answers `GET /api/agent/progress` with the seeded state
+- [x] 2.2 Implement fixtures F1-F4 per design D4 (F1 = replica of the real instance state as of 2026-09-20: one plan, no memory, paused unlinked session, Easy-heavy history; F2 carried item; F3 plateau; F4 stale memory); verify each seeds deterministically and the digest reflects the scenario
+- [x] 2.3 Implement the planner invocation and capture: `opencode run` briefing that names the `leeter-plan` skill and the scratch instance, then captures all plan POSTs and memory PUTs (request/response pairs) from the instance; verify the capture shows the posted plan and updated memory for a smoke fixture
+- [x] 2.4 Implement scripted checks (POST accepted/400 reasons, bank `lc_id`s, `based_on`/`carried_from` linkage, horizon/item-count bounds, narration heuristic, plan-diff no-op signal); verify each check fires correctly on hand-crafted good and bad payloads
+- [x] 2.5 Implement the judge prompt and scoring: judge gets the rubric + fixture ground truth + captured artifacts (not the planner's reasoning), returns JSON scores with evidence for dimensions 2–9; verify the judge output parses and covers every dimension with the evidence rule enforced (re-prompt on malformed JSON)
+- [x] 2.6 Implement `agent/evals/run.sh` (seed → plan → capture → judge → report: per fixture × dimension table, aggregates, weakest-dimension summary, rubric version + skill hash recorded) and `agent/evals/README.md` documenting the iteration loop; verify a full run over all four fixtures produces the report end-to-end
+
+## 3. Docs & final verification
+
+- [x] 3.1 Add a pointer in `agent/AGENT_PROTOCOL.md` (planning workflow section) to the `leeter-plan` skill and the rubric as the quality standard, and update `README.md` (planning section: skill name, rubric, eval loop); verify docs match the implemented file layout
+- [x] 3.2 Run `npm run typecheck`, `npm run test`, `npm run build` and fix any fallout; verify all gates pass and the eval is confirmed absent from `npm run test`
+- [x] 3.3 Run the full eval once against the real configured opencode, record the baseline scores in the report file, and identify the weakest dimension as the first prompt-iteration target; verify the report exists and names the baseline

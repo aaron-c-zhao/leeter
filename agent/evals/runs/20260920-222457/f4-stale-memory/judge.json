@@ -1,0 +1,37 @@
+{
+  "dimensions": {
+    "grounding": {
+      "score": 5,
+      "evidence": "Plan explicitly reconciles stale memory against the digest: memory v2 records 'DP is no longer weak — memory v1 was stale and is corrected here. Digest shows dynamic-programming at 2 attempts / 2 solved / 100%.' Item reasons cite digest facts — item 3 'two-pointers is an untouched topic in the digest', item 5 'sliding-window has zero attempts in the digest', item 6 '100% on the two DP items but a thin overall sample (2 sessions)', item 11 'DP is the strongest topic in the digest (2/2, 100%)'. No plan claim contradicts the seeded ground truth."
+    },
+    "ladder_continuity": {
+      "score": 5,
+      "evidence": "All three kinds of open work addressed. [A] digest carried_unsolved=[] and both plan-1 items are solved; retired in memory with 'nothing is carried and no carried_from links exist'. [B] memory-v1's paused Three Sum thread is explicitly resolved: 'GET /api/agent/sessions?status=paused and ?status=active both returned []', session list shows only two finished plan-1 sessions, and 3sum is re-queued as fresh work with a stated reason (item 4). [C] open threads recorded and re-checked in 'Next run checks'. based_on=1 chains to plan 1; carried_from=null is correct because there is no unfinished predecessor."
+    },
+    "targeting": {
+      "score": 5,
+      "evidence": "Targets the digest's weak spots — the four zero-attempt topics two-pointers, sliding-window, linked-list, stack — grouped as pattern pairs with a defensible difficulty ramp (167→15, 3→424, 206→141→2, 20) while still advancing the strongest topic via coin-change (item 11). Item count 9 over a 14-day horizon is ~4.5/week, inside the rubric's 4–8/week band and consistent with the recorded one-problem-a-day preference."
+    },
+    "coaching": {
+      "score": 5,
+      "evidence": "No completed reviews exist: both ground-truth sessions have reviewRequestStatus=null and reviewCount=0, and memory notes 'review_status=completed returned empty ... no pending reviews either'. Vacuous pass — no completed reviews available."
+    },
+    "hygiene": {
+      "score": 5,
+      "evidence": "focus and notes are crisp, user-facing statements of the block and its ramp ('Two-pointer & window breadth', with notes explaining each pair ramps); no adherence recap, history-used list, or memory paste, consistent with scripted check focus_notes_hygiene passing."
+    },
+    "reason_quality": {
+      "score": 5,
+      "evidence": "Every item's reason names its evidence: digest zero-attempt topics (items 3, 5, 7, 10), ladder/pattern progression (items 6, 8, 9, e.g. item 8 'Bridges this block's two-pointer intuition to linked lists via Floyd's tortoise-and-hare'), digest solve rate (item 11 'DP is the strongest topic in the digest (2/2, 100%)'), and the memory-thread resolution (item 4). No generic 'classic problem' filler anywhere."
+    },
+    "memory": {
+      "score": 5,
+      "evidence": "Memory v2 captures the decision and rationale (prior 'dynamic-programming still weak' note contradicted the digest, so the digest wins), all open threads (re-queued 3sum, watch list for first-attempt topics), and four concrete next-run checks. It explicitly reconciles both stale v1 entries rather than copying them, and does not duplicate plan text."
+    },
+    "efficiency": {
+      "score": 5,
+      "evidence": "Diff is driven by progress: both solved plan-1 items are retired, no unwarranted carried links, and the new set is justified from digest zero-attempt topics. Scripted not_a_noop passes ('item set differs from the previous plan'); no unchanged repost and no gratuitous churn of a working ladder."
+    }
+  },
+  "notes": "Well-executed run for a stale-memory fixture: the planner consistently let the digest override memory, retired solved items, resolved the phantom paused-session thread with an explicit check and reason, and re-derived targeting from zero-attempt topics. All scripted checks pass; no dimension warranted a deduction."
+}

@@ -1,0 +1,123 @@
+/*
+ * Design tokens — the single source of truth for color, spacing, type, radii.
+ * Light palette on :root; dark overrides on :root[data-theme="dark"].
+ * Both palettes define the exact same token names.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces & text */
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-inset: #f1f3f5;
+  --color-text: #1f2430;
+  --color-text-muted: #667085;
+  --color-border: #e3e6ea;
+
+  /* Accent */
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-soft: #eef2ff;
+  --color-on-accent: #ffffff;
+
+  /* Status */
+  --color-success: #1e7e34;
+  --color-success-soft: #e6f4ea;
+  --color-warning: #8a6d00;
+  --color-warning-border: #b28704;
+  --color-warning-soft: #fff8e1;
+  --color-danger: #b3261e;
+  --color-danger-soft: #fce8e6;
+
+  /* Neutral chip */
+  --color-chip-bg: #f1f3f4;
+  --color-chip-fg: #5f6368;
+  --color-chip-border: #9aa0a6;
+
+  /* Difficulty (LeetCode convention: easy green / medium amber / hard red) */
+  --color-diff-easy: #1e7e34;
+  --color-diff-easy-soft: #e6f4ea;
+  --color-diff-medium: #8a6d00;
+  --color-diff-medium-soft: #fff8e1;
+  --color-diff-hard: #b3261e;
+  --color-diff-hard-soft: #fce8e6;
+
+  /* Chart */
+  --color-bar: #818cf8;
+  --color-bar-solved: #34a853;
+  --color-bar-empty: #d5d9de;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.06);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+
+  /* Type */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 0.95rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.45rem;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Surfaces & text */
+  --color-bg: #131519;
+  --color-surface: #1d2026;
+  --color-inset: #16181d;
+  --color-text: #e6e8ec;
+  --color-text-muted: #9aa3af;
+  --color-border: #333945;
+
+  /* Accent */
+  --color-accent: #8b93f8;
+  --color-accent-hover: #a3aafa;
+  --color-accent-soft: #2a2d55;
+  --color-on-accent: #14161a;
+
+  /* Status */
+  --color-success: #4cc06e;
+  --color-success-soft: #1c3324;
+  --color-warning: #d9b64a;
+  --color-warning-border: #d9b64a;
+  --color-warning-soft: #332b12;
+  --color-danger: #f2867d;
+  --color-danger-soft: #3c1f1c;
+
+  /* Neutral chip */
+  --color-chip-bg: #2a2e36;
+  --color-chip-fg: #b3bac4;
+  --color-chip-border: #4a5160;
+
+  /* Difficulty */
+  --color-diff-easy: #4cc06e;
+  --color-diff-easy-soft: #1c3324;
+  --color-diff-medium: #d9b64a;
+  --color-diff-medium-soft: #332b12;
+  --color-diff-hard: #f2867d;
+  --color-diff-hard-soft: #3c1f1c;
+
+  /* Chart */
+  --color-bar: #8b93f8;
+  --color-bar-solved: #4cc06e;
+  --color-bar-empty: #2e333c;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,129 @@
+{
+ "fixture": "f1-first-run",
+ "plansAfter": [
+  {
+   "id": 2,
+   "createdAt": 1789936022495,
+   "horizonDays": 14,
+   "basedOn": 1,
+   "focus": "**Two-pointer & sliding-window block.** Finish the sorted Two Sum you already have open and the paused Longest Substring, then extend the converging-pointer idea to 3Sum. Level up sliding-window with Longest Repeating Character Replacement, add fast/slow pointers on a linked list, and keep Group Anagrams plus Valid Parentheses to hold the hash-map and stack base.",
+   "notes": "Practice habit for this block: before you finish a problem, write one line capturing the key insight (complement map, two-pointer movement rule, or window-shrink condition), and submit on LeetCode so your verdict lands in the log.",
+   "items": [
+    {
+     "id": 6,
+     "lcId": 167,
+     "slug": "two-sum-ii-input-array-is-sorted",
+     "reason": "There is a session already open on this problem (linked to plan item 1, status *practiced*), so finish it before starting anything new. Digest shows **two-pointers 1/0 and binary-search 1/0** — both entirely unproven — and this sorted-array complement is the bridge from the hash-map Two Sum to real pointer movement.",
+     "status": "not_started",
+     "carriedFrom": 1
+    },
+    {
+     "id": 7,
+     "lcId": 3,
+     "slug": "longest-substring-without-repeating-characters",
+     "reason": "The Sep 16 attempt on this problem is **paused at 40 minutes with no plan link**, so it never shows up in adherence — re-attempt it and close it out. **sliding-window is 0/1** and this is the canonical window-shrink template the rest of the block builds on.",
+     "status": "not_started",
+     "carriedFrom": 2
+    },
+    {
+     "id": 8,
+     "lcId": 15,
+     "slug": "3sum",
+     "reason": "Next rung on the same thread as the sorted Two Sum: **two-pointers is 0/1**. Sorting plus a fixed pivot and converging pointers is the general k-sum move, and it should land while the two-pointer mechanics from the sorted Two Sum are fresh.",
+     "status": "not_started",
+     "carriedFrom": 3
+    },
+    {
+     "id": 9,
+     "lcId": 49,
+     "slug": "group-anagrams",
+     "reason": "**Arrays-hashing is 8 attempts but only 13% solved, and all of it is Two Sum.** Group Anagrams forces a different hash key (canonical form) instead of the complement lookup, which is exactly the variety the base pattern is missing.",
+     "status": "not_started",
+     "carriedFrom": 4
+    },
+    {
+     "id": 10,
+     "lcId": 141,
+     "slug": "linked-list-cycle",
+     "reason": "**Two-pointers is the weakest thread (0/1).** Fast/slow pointers on a linked list is the Easy on-ramp to the pattern in a new data structure — an achievable win that is not another Two Sum variant, and it introduces linked-list, which the digest has no practice on at all.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 11,
+     "lcId": 424,
+     "slug": "longest-repeating-character-replacement",
+     "reason": "Direct difficulty step after Longest Substring in the **sliding-window thread (0/1)**: same window mechanics, plus the max-frequency-in-window constraint. Keep it after the Longest Substring item so the shrink rule is established first.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 12,
+     "lcId": 20,
+     "slug": "valid-parentheses",
+     "reason": "The digest shows **no stack practice whatsoever**, and a short Easy that pairs with the string work in Group Anagrams / Longest Substring adds a second core structure without raising difficulty on the unproven two-pointer thread.",
+     "status": "not_started",
+     "carriedFrom": null
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "createdAt": 1789819200000,
+   "horizonDays": 14,
+   "basedOn": null,
+   "focus": "Two weeks on the hash-map -> two-pointers -> sliding-window ladder. Two Sum is already solved optimally (one-pass complement map); the next step is the same idea under different constraints (sorted array, k-sum, windowed uniqueness) plus finishing the paused Longest Substring session.",
+   "notes": null,
+   "items": [
+    {
+     "id": 1,
+     "lcId": 167,
+     "slug": "two-sum-ii-input-array-is-sorted",
+     "reason": "same complement idea on a sorted array",
+     "status": "practiced",
+     "carriedFrom": null
+    },
+    {
+     "id": 2,
+     "lcId": 3,
+     "slug": "longest-substring-without-repeating-characters",
+     "reason": "finish the paused session",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 3,
+     "lcId": 15,
+     "slug": "3sum",
+     "reason": "k-sum generalization",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 4,
+     "lcId": 49,
+     "slug": "group-anagrams",
+     "reason": "hash-map pattern on strings",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 5,
+     "lcId": 350,
+     "slug": "two-sum-iv-input-is-a-bst",
+     "reason": "two pointers on a BST",
+     "status": "not_started",
+     "carriedFrom": null
+    }
+   ]
+  }
+ ],
+ "memoryVersionsAfter": [
+  {
+   "body": "# Memory — planning state\n\n## Current ladder\n- Plan **2** (posted 2026-09-20, horizon 14d), `based_on: 1`. Theme: two-pointer & sliding-window.\n- Order: `two-sum-ii`(167) → `longest-substring`(3) → `3sum`(15) → `group-anagrams`(49) → `linked-list-cycle`(141) → `longest-repeating-char-replacement`(424) → `valid-parentheses`(20).\n- Item ids in plan 2: 167→6, 3→7, 15→8, 49→9, 141→10, 424→11, 20→12.\n\n## Why this revision\n- Digest (ground truth): 8 attempts / 1 solved. `arrays-hashing` 8/1 (0.13), `binary-search` 1/0, `sliding-window` 1/0, `two-pointers` 1/0. Plan 1 adherence: 0 solved, 1 practiced, 4 not started; `carried_unsolved` empty because plan 1 is the root (no `carried_from`).\n- The 8 arrays-hashing attempts are almost entirely repeated Two Sum (sessions 1,2,4,5,6,7) with only session 1 Accepted — so the real story is *Two Sum grinding*, not broad arrays mastery. Chose not to add more Two Sum variants.\n- Carried plan-1 items 1–4 (`carried_from` 1,2,3,4) because 167 has an open session and 3/15/49 are untouched next rungs.\n- New picks: 141 (Easy two-pointers on a new structure — two-pointers is the weakest thread), 424 (sliding-window difficulty step after 3), 20 (stack — zero digest practice).\n- **Retired plan-1 item 5 = `lc350` two-sum-iv-input-is-a-bst.** Reason: a third Easy Two Sum variant; the comfort-zone trap the rubric warns about. Defer BST/tree review until the two-pointer thread is stable.\n- Count = 7 items for 14d (5 Medium, 2 Easy). Deliberately modest: user pace is ~1–2 short sessions/week, and 4 of 7 are carried.\n\n## Open threads (watch next run)\n- **[in-graph active]** Session 8 on `two-sum-ii` (lc167), `planItemId 1`, `activeMs 0`, 1 log line — opened Sep 20 but essentially not worked. Check whether it gets finished under plan-2 item 6 (carried_from 1).\n- **[outside graph, paused]** Session 3 on `longest-substring` (lc3), `planItemId null`, 40 min active. Invisible to `carried_unsolved`; carried as plan-2 item 7. Confirm it gets re-attempted, not abandoned.\n- **[review signal]** Reviews 1 & 2 (sessions 1, 7): \"Notes were thin\" both times; `recommendedFocus` = leave a key-insight note, compare draft snapshots, and **submit on LeetCode + re-sync so verdicts land**. 7 of 8 sessions have `outcome: null` — verdicts are not reaching the log. Notes in plan 2 tell the user to note the insight and submit.\n- Review signals to re-check: are notes appearing on new sessions? Are outcomes no longer null (i.e. is the submit/re-sync loop working)?\n- No pending review requests this run (`/reviews/pending` empty).\n\n## Stale / reconcile\n- Memory was previously **empty** (`body: null`, no versions). This is a fresh notebook; digest is authority. Nothing to reconcile.\n\n## Next-run checks\n1. `GET /api/agent/progress`: did `two-pointers` / `sliding-window` / `binary-search` move off 0/1? Did plan-2 solved count rise above 0?\n2. Is the paused session 3 resolved (finished) or still dangling? Is session 8 (lc167) still `active`?\n3. New sessions carry non-null `outcome` and non-empty notes (review signals)?\n4. If 167/3 still unstarted/unfinished, do **not** ladder up to 3Sum/424; instead re-scope to a shorter two-pointer-only block.",
+   "createdAt": 1789936038550,
+   "size": 3226
+  }
+ ],
+ "currentMemoryAfter": "# Memory — planning state\n\n## Current ladder\n- Plan **2** (posted 2026-09-20, horizon 14d), `based_on: 1`. Theme: two-pointer & sliding-window.\n- Order: `two-sum-ii`(167) → `longest-substring`(3) → `3sum`(15) → `group-anagrams`(49) → `linked-list-cycle`(141) → `longest-repeating-char-replacement`(424) → `valid-parentheses`(20).\n- Item ids in plan 2: 167→6, 3→7, 15→8, 49→9, 141→10, 424→11, 20→12.\n\n## Why this revision\n- Digest (ground truth): 8 attempts / 1 solved. `arrays-hashing` 8/1 (0.13), `binary-search` 1/0, `sliding-window` 1/0, `two-pointers` 1/0. Plan 1 adherence: 0 solved, 1 practiced, 4 not started; `carried_unsolved` empty because plan 1 is the root (no `carried_from`).\n- The 8 arrays-hashing attempts are almost entirely repeated Two Sum (sessions 1,2,4,5,6,7) with only session 1 Accepted — so the real story is *Two Sum grinding*, not broad arrays mastery. Chose not to add more Two Sum variants.\n- Carried plan-1 items 1–4 (`carried_from` 1,2,3,4) because 167 has an open session and 3/15/49 are untouched next rungs.\n- New picks: 141 (Easy two-pointers on a new structure — two-pointers is the weakest thread), 424 (sliding-window difficulty step after 3), 20 (stack — zero digest practice).\n- **Retired plan-1 item 5 = `lc350` two-sum-iv-input-is-a-bst.** Reason: a third Easy Two Sum variant; the comfort-zone trap the rubric warns about. Defer BST/tree review until the two-pointer thread is stable.\n- Count = 7 items for 14d (5 Medium, 2 Easy). Deliberately modest: user pace is ~1–2 short sessions/week, and 4 of 7 are carried.\n\n## Open threads (watch next run)\n- **[in-graph active]** Session 8 on `two-sum-ii` (lc167), `planItemId 1`, `activeMs 0`, 1 log line — opened Sep 20 but essentially not worked. Check whether it gets finished under plan-2 item 6 (carried_from 1).\n- **[outside graph, paused]** Session 3 on `longest-substring` (lc3), `planItemId null`, 40 min active. Invisible to `carried_unsolved`; carried as plan-2 item 7. Confirm it gets re-attempted, not abandoned.\n- **[review signal]** Reviews 1 & 2 (sessions 1, 7): \"Notes were thin\" both times; `recommendedFocus` = leave a key-insight note, compare draft snapshots, and **submit on LeetCode + re-sync so verdicts land**. 7 of 8 sessions have `outcome: null` — verdicts are not reaching the log. Notes in plan 2 tell the user to note the insight and submit.\n- Review signals to re-check: are notes appearing on new sessions? Are outcomes no longer null (i.e. is the submit/re-sync loop working)?\n- No pending review requests this run (`/reviews/pending` empty).\n\n## Stale / reconcile\n- Memory was previously **empty** (`body: null`, no versions). This is a fresh notebook; digest is authority. Nothing to reconcile.\n\n## Next-run checks\n1. `GET /api/agent/progress`: did `two-pointers` / `sliding-window` / `binary-search` move off 0/1? Did plan-2 solved count rise above 0?\n2. Is the paused session 3 resolved (finished) or still dangling? Is session 8 (lc167) still `active`?\n3. New sessions carry non-null `outcome` and non-empty notes (review signals)?\n4. If 167/3 still unstarted/unfinished, do **not** ladder up to 3Sum/424; instead re-scope to a shorter two-pointer-only block."
+}

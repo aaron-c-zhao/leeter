@@ -1,0 +1,424 @@
+{
+ "fixture": "f3-plateau",
+ "fixtureDescription": "Plateau: the current plan is fully solved, no carried items, and coverage is flat (one topic group repeated). The planner must target untouched material and avoid re-posting an unchanged plan.",
+ "digest": {
+  "totals": {
+   "attempts": 4,
+   "solved": 4
+  },
+  "topics": [
+   {
+    "topic": "arrays-hashing",
+    "attempts": 4,
+    "solved": 4,
+    "solve_rate": 1,
+    "last_practiced_at": 1789473600000
+   },
+   {
+    "topic": "two-pointers",
+    "attempts": 2,
+    "solved": 2,
+    "solve_rate": 1,
+    "last_practiced_at": 1789473600000
+   },
+   {
+    "topic": "binary-search",
+    "attempts": 1,
+    "solved": 1,
+    "solve_rate": 1,
+    "last_practiced_at": 1789473600000
+   }
+  ],
+  "current_plan": {
+   "id": 1,
+   "created_at": 1788868800000,
+   "horizon_days": 10,
+   "solved": 4,
+   "practiced": 0,
+   "not_started": 0,
+   "carried_unsolved": []
+  },
+  "taxonomy_version": 1
+ },
+ "sessions": [
+  {
+   "id": 4,
+   "problem": {
+    "id": 10,
+    "title": "two-sum-ii-input-array-is-sorted",
+    "slug": "two-sum-ii-input-array-is-sorted",
+    "difficulty": "Medium",
+    "tags": [
+     "array",
+     "two-pointers",
+     "binary-search"
+    ]
+   },
+   "startedAt": 1789473600000,
+   "finishedAt": 1789476000000,
+   "activeMs": 2100000,
+   "status": "finished",
+   "outcome": "Accepted",
+   "reviewRequestStatus": null,
+   "reviewCount": 0,
+   "planItemId": 4
+  },
+  {
+   "id": 3,
+   "problem": {
+    "id": 4,
+    "title": "3sum",
+    "slug": "3sum",
+    "difficulty": "Medium",
+    "tags": [
+     "array",
+     "two-pointers",
+     "sorting"
+    ]
+   },
+   "startedAt": 1789300800000,
+   "finishedAt": 1789303200000,
+   "activeMs": 2100000,
+   "status": "finished",
+   "outcome": "Accepted",
+   "reviewRequestStatus": null,
+   "reviewCount": 0,
+   "planItemId": 3
+  },
+  {
+   "id": 2,
+   "problem": {
+    "id": 6,
+    "title": "group-anagrams",
+    "slug": "group-anagrams",
+    "difficulty": "Medium",
+    "tags": [
+     "hash-table",
+     "string",
+     "sorting"
+    ]
+   },
+   "startedAt": 1789128000000,
+   "finishedAt": 1789130400000,
+   "activeMs": 2100000,
+   "status": "finished",
+   "outcome": "Accepted",
+   "reviewRequestStatus": null,
+   "reviewCount": 0,
+   "planItemId": 2
+  },
+  {
+   "id": 1,
+   "problem": {
+    "id": 1,
+    "title": "two-sum",
+    "slug": "two-sum",
+    "difficulty": "Easy",
+    "tags": [
+     "array",
+     "hash-table"
+    ]
+   },
+   "startedAt": 1788955200000,
+   "finishedAt": 1788957600000,
+   "activeMs": 2100000,
+   "status": "finished",
+   "outcome": "Accepted",
+   "reviewRequestStatus": null,
+   "reviewCount": 0,
+   "planItemId": 1
+  }
+ ],
+ "plans": [
+  {
+   "id": 1,
+   "createdAt": 1788868800000,
+   "horizonDays": 10,
+   "focusMd": "Arrays and hashing week: the complement map family.",
+   "notesMd": null,
+   "basedOn": null,
+   "items": [
+    {
+     "id": 1,
+     "planId": 1,
+     "lcId": 1,
+     "slug": "two-sum",
+     "reasonMd": "complement map",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 2,
+     "planId": 1,
+     "lcId": 49,
+     "slug": "group-anagrams",
+     "reasonMd": "hash map on strings",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 3,
+     "planId": 1,
+     "lcId": 15,
+     "slug": "3sum",
+     "reasonMd": "two pointers",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 4,
+     "planId": 1,
+     "lcId": 167,
+     "slug": "two-sum-ii-input-array-is-sorted",
+     "reasonMd": "sorted variant",
+     "status": "solved",
+     "carriedFrom": null
+    }
+   ]
+  }
+ ],
+ "memory": {
+  "body": "# Memory\n- Plan going well; all items solved.\n- Keep building the same ladder next week.",
+  "versionId": 1,
+  "updatedAt": 1789560000000
+ },
+ "memoryVersions": [
+  {
+   "body": "# Memory\n- Plan going well; all items solved.\n- Keep building the same ladder next week.",
+   "createdAt": 1789560000000
+  }
+ ],
+ "bank": [
+  {
+   "id": 1,
+   "lcId": 1,
+   "title": "two-sum",
+   "slug": "two-sum",
+   "difficulty": "Easy",
+   "tags": [
+    "array",
+    "hash-table"
+   ]
+  },
+  {
+   "id": 2,
+   "lcId": 2,
+   "title": "add-two-numbers",
+   "slug": "add-two-numbers",
+   "difficulty": "Medium",
+   "tags": [
+    "linked-list",
+    "math"
+   ]
+  },
+  {
+   "id": 3,
+   "lcId": 3,
+   "title": "longest-substring-without-repeating-characters",
+   "slug": "longest-substring-without-repeating-characters",
+   "difficulty": "Medium",
+   "tags": [
+    "hash-table",
+    "string",
+    "sliding-window"
+   ]
+  },
+  {
+   "id": 4,
+   "lcId": 15,
+   "title": "3sum",
+   "slug": "3sum",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "two-pointers",
+    "sorting"
+   ]
+  },
+  {
+   "id": 5,
+   "lcId": 20,
+   "title": "valid-parentheses",
+   "slug": "valid-parentheses",
+   "difficulty": "Easy",
+   "tags": [
+    "string",
+    "stack"
+   ]
+  },
+  {
+   "id": 6,
+   "lcId": 49,
+   "title": "group-anagrams",
+   "slug": "group-anagrams",
+   "difficulty": "Medium",
+   "tags": [
+    "hash-table",
+    "string",
+    "sorting"
+   ]
+  },
+  {
+   "id": 7,
+   "lcId": 70,
+   "title": "climbing-stairs",
+   "slug": "climbing-stairs",
+   "difficulty": "Easy",
+   "tags": [
+    "math",
+    "dynamic-programming",
+    "memoization"
+   ]
+  },
+  {
+   "id": 8,
+   "lcId": 121,
+   "title": "best-time-to-buy-and-sell-stock",
+   "slug": "best-time-to-buy-and-sell-stock",
+   "difficulty": "Easy",
+   "tags": [
+    "array",
+    "dynamic-programming"
+   ]
+  },
+  {
+   "id": 9,
+   "lcId": 141,
+   "title": "linked-list-cycle",
+   "slug": "linked-list-cycle",
+   "difficulty": "Easy",
+   "tags": [
+    "hash-table",
+    "linked-list",
+    "two-pointers"
+   ]
+  },
+  {
+   "id": 10,
+   "lcId": 167,
+   "title": "two-sum-ii-input-array-is-sorted",
+   "slug": "two-sum-ii-input-array-is-sorted",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "two-pointers",
+    "binary-search"
+   ]
+  },
+  {
+   "id": 11,
+   "lcId": 198,
+   "title": "house-robber",
+   "slug": "house-robber",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "dynamic-programming"
+   ]
+  },
+  {
+   "id": 12,
+   "lcId": 206,
+   "title": "reverse-linked-list",
+   "slug": "reverse-linked-list",
+   "difficulty": "Easy",
+   "tags": [
+    "linked-list",
+    "recursion"
+   ]
+  },
+  {
+   "id": 13,
+   "lcId": 215,
+   "title": "kth-largest-element-in-an-array",
+   "slug": "kth-largest-element-in-an-array",
+   "difficulty": "Medium",
+   "tags": [
+    "heap",
+    "divide-and-conquer",
+    "sorting"
+   ]
+  },
+  {
+   "id": 14,
+   "lcId": 226,
+   "title": "invert-binary-tree",
+   "slug": "invert-binary-tree",
+   "difficulty": "Easy",
+   "tags": [
+    "tree",
+    "depth-first-search",
+    "breadth-first-search"
+   ]
+  },
+  {
+   "id": 15,
+   "lcId": 238,
+   "title": "product-of-array-except-self",
+   "slug": "product-of-array-except-self",
+   "difficulty": "Medium",
+   "tags": [
+    "array",
+    "prefix-sum"
+   ]
+  },
+  {
+   "id": 16,
+   "lcId": 239,
+   "title": "sliding-window-maximum",
+   "slug": "sliding-window-maximum",
+   "difficulty": "Hard",
+   "tags": [
+    "sliding-window",
+    "heap",
+    "monotonic-queue"
+   ]
+  },
+  {
+   "id": 17,
+   "lcId": 322,
+   "title": "coin-change",
+   "slug": "coin-change",
+   "difficulty": "Medium",
+   "tags": [
+    "dynamic-programming",
+    "breadth-first-search"
+   ]
+  },
+  {
+   "id": 18,
+   "lcId": 326,
+   "title": "power-of-three",
+   "slug": "power-of-three",
+   "difficulty": "Easy",
+   "tags": [
+    "math"
+   ]
+  },
+  {
+   "id": 19,
+   "lcId": 350,
+   "title": "two-sum-iv-input-is-a-bst",
+   "slug": "two-sum-iv-input-is-a-bst",
+   "difficulty": "Easy",
+   "tags": [
+    "hash-table",
+    "two-pointers",
+    "tree",
+    "depth-first-search"
+   ]
+  },
+  {
+   "id": 20,
+   "lcId": 424,
+   "title": "longest-repeating-character-replacement",
+   "slug": "longest-repeating-character-replacement",
+   "difficulty": "Medium",
+   "tags": [
+    "hash-table",
+    "string",
+    "sliding-window"
+   ]
+  }
+ ]
+}

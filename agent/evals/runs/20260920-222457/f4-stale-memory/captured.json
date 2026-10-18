@@ -1,0 +1,126 @@
+{
+ "fixture": "f4-stale-memory",
+ "plansAfter": [
+  {
+   "id": 2,
+   "createdAt": 1789936579727,
+   "horizonDays": 14,
+   "basedOn": 1,
+   "focus": "## Two-pointer & window breadth\n\nMove beyond 1-D DP into the patterns that unlock most array and string problems. The block opens with **converging two pointers** (a sorted-array warm-up, then 3Sum), then **variable sliding windows** (uniqueness, then a frequency budget). It closes with a first pass at **linked-list pointer manipulation**, one step up in DP (unbounded knapsack), and a single stack rep to keep a second structure moving.",
+   "notes": "Each pair ramps: the first problem isolates the pattern, the second adds a twist (dedup for 3Sum, a frequency budget for the window). Aim for about one problem a day — the 14-day horizon leaves room to split a harder one across two sittings.",
+   "items": [
+    {
+     "id": 3,
+     "lcId": 167,
+     "slug": "two-sum-ii-input-array-is-sorted",
+     "reason": "Two pointers is an untouched topic in the digest (no attempts under two-pointers). This sorted-array variant isolates the converging-pointer scan that 3Sum builds on, making it the clean first step of the block.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 4,
+     "lcId": 15,
+     "slug": "3sum",
+     "reason": "Memory v1 flagged a paused Three Sum draft, but the session list shows no paused or active session, so the thread is re-queued here as fresh work. Step 2 of two pointers: fix one index, then run the converging scan with deduplication.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 5,
+     "lcId": 3,
+     "slug": "longest-substring-without-repeating-characters",
+     "reason": "sliding-window has zero attempts in the digest. This is the minimal variable-size window (grow right, shrink on a repeat) and sets up the frequency-budget version next.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 6,
+     "lcId": 424,
+     "slug": "longest-repeating-character-replacement",
+     "reason": "Progression inside the sliding-window pattern: from tracking uniqueness to maintaining a frequency budget with the max-count trick. Same pattern, harder invariant, still Medium — a safe next step given 100% on the two DP items but a thin overall sample (2 sessions).",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 7,
+     "lcId": 206,
+     "slug": "reverse-linked-list",
+     "reason": "linked-list has zero attempts in the digest. Iterative pointer reversal is the base manipulation every linked-list problem reuses (prev/cur/next and dummy heads).",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 8,
+     "lcId": 141,
+     "slug": "linked-list-cycle",
+     "reason": "Bridges this block's two-pointer intuition to linked lists via Floyd's tortoise-and-hare, reusing the converging-pointer idea already introduced in two-sum-ii and 3Sum.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 9,
+     "lcId": 2,
+     "slug": "add-two-numbers",
+     "reason": "Linked-list traversal with carry and a dummy head at Medium, reusing reverse-linked-list's pointer mechanics in a different shape. Slope within the linked-list step: Easy (206) to Easy (141) to Medium traversal.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 10,
+     "lcId": 20,
+     "slug": "valid-parentheses",
+     "reason": "stack is a zero-attempt topic; this is the canonical push/pop problem and a short confidence rep between the Medium items.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 11,
+     "lcId": 322,
+     "slug": "coin-change",
+     "reason": "DP is the strongest topic in the digest (2/2, 100%), so the ladder should not abandon it. This advances from house-robber's 1-D take/skip recurrence to unbounded-knapsack DP — a real step up rather than a repeat of solved work.",
+     "status": "not_started",
+     "carriedFrom": null
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "createdAt": 1789041600000,
+   "horizonDays": 8,
+   "basedOn": null,
+   "focus": "Dynamic programming week.",
+   "notes": null,
+   "items": [
+    {
+     "id": 1,
+     "lcId": 70,
+     "slug": "climbing-stairs",
+     "reason": "DP entry point",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 2,
+     "lcId": 198,
+     "slug": "house-robber",
+     "reason": "1-D DP",
+     "status": "solved",
+     "carriedFrom": null
+    }
+   ]
+  }
+ ],
+ "memoryVersionsAfter": [
+  {
+   "body": "# Memory\n\n## Ladder position (plan 2, current)\nPlan 2 (\"Two-pointer & window breadth\", 14 days) revises plan 1. Both plan-1 items\nare **solved**, so nothing is carried and no `carried_from` links exist:\n- climbing-stairs (item 1) — solved, retired.\n- house-robber (item 2) — solved, retired.\n\n## Decision and rationale\n- **DP is no longer weak — memory v1 was stale and is corrected here.** Digest\n  shows dynamic-programming at 2 attempts / 2 solved / 100%. The prior note\n  \"dynamic-programming still weak; keep the ladder there\" contradicted the\n  digest, so the digest wins. Instead of repeating solved DP, plan 2 advances\n  the DP thread with one harder step (coin-change, unbounded knapsack) and\n  spends the rest of the block on genuinely untouched topics.\n- Targeting is driven by **zero-attempt topics** in the digest: two-pointers,\n  sliding-window, linked-list, stack. Items are grouped in pattern pairs with a\n  difficulty ramp (two-sum-ii → 3sum; longest-substring → 424;\n  reverse-linked-list → linked-list-cycle → add-two-numbers).\n- Item count: 9 items over 14 days, consistent with the user's one-problem-a-day\n  preference and the thin sample (2 sessions; 100% solve rate is not yet robust).\n- No completed reviews exist (`review_status=completed` returned empty), so\n  coaching was integrated vacuously; no pending reviews either.\n\n## Open threads / watch list\n- **3sum re-queued as fresh work (item 4).** Memory v1 claimed a Three Sum\n  session was paused mid-draft, but `GET /api/agent/sessions?status=paused` and\n  `?status=active` both returned `[]`, and the full session list has only two\n  finished sessions (both plan-1). The paused-session thread is therefore\n  resolved as not present; 3sum stays scheduled because two-pointers is\n  untouched, not because of a recoverable session.\n- Watch whether the pattern pairs get attempted; if 3sum stalls, two-sum-ii\n  should be treated as the prerequisite, not a parallel item.\n- Watch first-attempt outcomes under two-pointers / sliding-window / linked-list\n  — this is the first time these topics are exercised, so solve rate here is the\n  real signal (not the current 100% on easier material).\n- Keep the one-problem-per-day preference.\n- No review requests have ever been created on these sessions; if that changes,\n  read the completed reviews next run before re-targeting.\n\n## Next run checks\n1. Re-read the digest; do not trust this notebook over it.\n2. Retire solved items and carry genuinely unfinished ones with `carried_from`.\n3. Check for paused/active sessions outside the plan graph before assuming none.\n4. Re-check whether any completed reviews now exist and fold in\n   `recommended_focus` / `weaknesses`.",
+   "createdAt": 1789936591557,
+   "size": 2707
+  },
+  {
+   "body": "# Memory\n- Open thread: the Three Sum session is paused mid-draft — resume it first.\n- dynamic-programming still weak; keep the ladder there.\n- User prefers one problem per day.",
+   "createdAt": 1789732800000,
+   "size": 179
+  }
+ ],
+ "currentMemoryAfter": "# Memory\n\n## Ladder position (plan 2, current)\nPlan 2 (\"Two-pointer & window breadth\", 14 days) revises plan 1. Both plan-1 items\nare **solved**, so nothing is carried and no `carried_from` links exist:\n- climbing-stairs (item 1) — solved, retired.\n- house-robber (item 2) — solved, retired.\n\n## Decision and rationale\n- **DP is no longer weak — memory v1 was stale and is corrected here.** Digest\n  shows dynamic-programming at 2 attempts / 2 solved / 100%. The prior note\n  \"dynamic-programming still weak; keep the ladder there\" contradicted the\n  digest, so the digest wins. Instead of repeating solved DP, plan 2 advances\n  the DP thread with one harder step (coin-change, unbounded knapsack) and\n  spends the rest of the block on genuinely untouched topics.\n- Targeting is driven by **zero-attempt topics** in the digest: two-pointers,\n  sliding-window, linked-list, stack. Items are grouped in pattern pairs with a\n  difficulty ramp (two-sum-ii → 3sum; longest-substring → 424;\n  reverse-linked-list → linked-list-cycle → add-two-numbers).\n- Item count: 9 items over 14 days, consistent with the user's one-problem-a-day\n  preference and the thin sample (2 sessions; 100% solve rate is not yet robust).\n- No completed reviews exist (`review_status=completed` returned empty), so\n  coaching was integrated vacuously; no pending reviews either.\n\n## Open threads / watch list\n- **3sum re-queued as fresh work (item 4).** Memory v1 claimed a Three Sum\n  session was paused mid-draft, but `GET /api/agent/sessions?status=paused` and\n  `?status=active` both returned `[]`, and the full session list has only two\n  finished sessions (both plan-1). The paused-session thread is therefore\n  resolved as not present; 3sum stays scheduled because two-pointers is\n  untouched, not because of a recoverable session.\n- Watch whether the pattern pairs get attempted; if 3sum stalls, two-sum-ii\n  should be treated as the prerequisite, not a parallel item.\n- Watch first-attempt outcomes under two-pointers / sliding-window / linked-list\n  — this is the first time these topics are exercised, so solve rate here is the\n  real signal (not the current 100% on easier material).\n- Keep the one-problem-per-day preference.\n- No review requests have ever been created on these sessions; if that changes,\n  read the completed reviews next run before re-targeting.\n\n## Next run checks\n1. Re-read the digest; do not trust this notebook over it.\n2. Retire solved items and carry genuinely unfinished ones with `carried_from`.\n3. Check for paused/active sessions outside the plan graph before assuming none.\n4. Re-check whether any completed reviews now exist and fold in\n   `recommended_focus` / `weaknesses`."
+}

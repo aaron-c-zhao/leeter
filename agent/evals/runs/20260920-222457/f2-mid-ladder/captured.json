@@ -1,0 +1,136 @@
+{
+ "fixture": "f2-mid-ladder",
+ "plansAfter": [
+  {
+   "id": 3,
+   "createdAt": 1789936210710,
+   "horizonDays": 14,
+   "basedOn": 2,
+   "focus": "A repair block for two pointers and dynamic programming. Close out the carried 3Sum, then lock in the pointer pattern on the sorted two-sum before the next k-sum step. On the DP side, turn your coin-change and house-robber near-misses into clean bottom-up solutions, then bring hash-map work back at the end, aimed at your weakest practiced topic.",
+   "notes": "Stay on medium difficulty this round — skip the Easy warm-ups. Suggested cadence: one problem every two to three days. Before coding a DP problem, write the recurrence and the base case by hand; before a two-pointer problem, write down the invariant and where the pointers start and stop.",
+   "items": [
+    {
+     "id": 6,
+     "lcId": 15,
+     "slug": "3sum",
+     "reason": "Carried from plan 2 (item 4). Two pointers is 0/1 in the digest, and the recorded attempt was a Wrong Answer on the sort-based approach — the skeleton is right, the open work is duplicate-skipping and pointer bounds. Closing this carried thread is the first ladder step.",
+     "status": "not_started",
+     "carriedFrom": 4
+    },
+    {
+     "id": 7,
+     "lcId": 167,
+     "slug": "two-sum-ii-input-array-is-sorted",
+     "reason": "The cleanest two-pointer invariant: both pointers on a sorted array, no dedup complexity. It drills exactly the mechanic 3Sum needs and moves the 0/1 two-pointers topic forward at medium difficulty, so it is a new problem rather than an Easy repeat.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 8,
+     "lcId": 322,
+     "slug": "coin-change",
+     "reason": "Re-attempt of plan 2 item 5: the linked attempt hit Time Limit Exceeded, which points at the search/greedy route instead of the intended DP. Dynamic programming is 33% (1/3, digest) and this is its highest-value step — bottom-up coin DP before any knapsack-style material.",
+     "status": "not_started",
+     "carriedFrom": 5
+    },
+    {
+     "id": 9,
+     "lcId": 198,
+     "slug": "house-robber",
+     "reason": "Session 5 was a Wrong-Answer DP attempt started outside the plan graph, so adherence never counted it. After the coin-change recurrence, House Robber adds the take-vs-skip state transition; the pair is the core rebuild of the 33% dynamic-programming topic.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 10,
+     "lcId": 49,
+     "slug": "group-anagrams",
+     "reason": "arrays-hashing is the weakest practiced topic at 25% (1/4, digest). Grouping by a canonical key (sorted string or count tuple) is the hash-map pattern that topic is missing, and medium difficulty keeps it off the Easy-repeat path.",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 11,
+     "lcId": 3,
+     "slug": "longest-substring-without-repeating-characters",
+     "reason": "Sliding window is unpracticed and compounds the hash-table weakness behind the 25% arrays-hashing rate. A moving window with a last-seen map is the standard medium-grade entry to the family and connects hashing back to string work.",
+     "status": "not_started",
+     "carriedFrom": null
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "createdAt": 1789732800000,
+   "horizonDays": 10,
+   "basedOn": 1,
+   "focus": "Two pointers week, carrying Three Sum forward.",
+   "notes": null,
+   "items": [
+    {
+     "id": 4,
+     "lcId": 15,
+     "slug": "3sum",
+     "reason": "continue from last week",
+     "status": "practiced",
+     "carriedFrom": 2
+    },
+    {
+     "id": 5,
+     "lcId": 322,
+     "slug": "coin-change",
+     "reason": "new topic",
+     "status": "not_started",
+     "carriedFrom": null
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "createdAt": 1788696000000,
+   "horizonDays": 7,
+   "basedOn": null,
+   "focus": "Warm-up week: hash maps and two pointers.",
+   "notes": null,
+   "items": [
+    {
+     "id": 1,
+     "lcId": 1,
+     "slug": "two-sum",
+     "reason": "start of the ladder",
+     "status": "solved",
+     "carriedFrom": null
+    },
+    {
+     "id": 2,
+     "lcId": 15,
+     "slug": "3sum",
+     "reason": "two pointers step",
+     "status": "not_started",
+     "carriedFrom": null
+    },
+    {
+     "id": 3,
+     "lcId": 20,
+     "slug": "valid-parentheses",
+     "reason": "stack warm-up",
+     "status": "practiced",
+     "carriedFrom": null
+    }
+   ]
+  }
+ ],
+ "memoryVersionsAfter": [
+  {
+   "body": "# Memory\n\n- **Ladder position:** plan 3 (posted, `based_on` 2, 14-day horizon). Repair block: two pointers + dynamic programming, hash-map work reintroduced last.\n- **Decision & rationale:** carried 3Sum (plan 2 item 4, still `practiced`/unsolved) and re-attempted Coin Change (plan 2 item 5) — both chained via `carried_from`. Added Two Sum II as the two-pointer stepping stone, House Robber as the second DP rung, Group Anagrams for the weak hash-map topic, and Longest Substring for sliding window. Kept everything medium per the user's stated preference (recorded last run); no Easy repeats.\n- **Reconciled:** prior memory asked \"watch whether Coin Change improves\" — answered: it did not. Session 6 (Coin Change) hit Time Limit Exceeded, so the re-attempt targets bottom-up DP, not search.\n- **Open threads (next run):**\n  - 3Sum — carried again (new item 6, `carried_from` 4). Check whether it finally gets an Accepted verdict; two-pointers remains 0/1.\n  - Coin Change — re-attempt (new item 8, `carried_from` 5). Watch for the TLE pattern recurring (sign of skipping memoization/bottom-up).\n  - House Robber — session 5 was a Wrong-Answer DP attempt with `planItemId: null`, invisible to adherence. It is now planned (item 9); confirm it gets linked to a plan item this time.\n  - Group Anagrams / Longest Substring — new hash-map probes; arrays-hashing is the weakest practiced topic (25%, 1/4).\n- **Retired / resolved:** Valid Parentheses (plan 1 item 3) had a finished session with no verdict; not re-added — stack fundamentals are not the current bottleneck. Graph topic shows 0/1 but that is only Coin Change's BFS tag; the bank has no real graph problem, so no graph work is scheduled.\n- **Coaching signals:** no completed reviews exist in this instance (`reviews/pending` empty, all sessions `reviewCount: 0`) — nothing to fold in this run.\n- **Watch next run:** plan 2 adherence was 0 solved / 1 practiced / 1 not started, so engagement is the real risk — if plan 3 shows little activity, shrink the item list rather than raising difficulty. Also re-check DP solve rate (currently 33%) after Coin Change and House Robber.",
+   "createdAt": 1789936226068,
+   "size": 2154
+  },
+  {
+   "body": "# Memory\n- Carried Three Sum from plan 1 into plan 2; user practiced it once, Wrong Answer on the sort-based approach.\n- dynamic-programming looks weak (1 accepted of 3 attempts); watch whether Coin Change improves.\n- User asked for medium-difficulty steps, not easy repeats.",
+   "createdAt": 1789732800000,
+   "size": 275
+  }
+ ],
+ "currentMemoryAfter": "# Memory\n\n- **Ladder position:** plan 3 (posted, `based_on` 2, 14-day horizon). Repair block: two pointers + dynamic programming, hash-map work reintroduced last.\n- **Decision & rationale:** carried 3Sum (plan 2 item 4, still `practiced`/unsolved) and re-attempted Coin Change (plan 2 item 5) — both chained via `carried_from`. Added Two Sum II as the two-pointer stepping stone, House Robber as the second DP rung, Group Anagrams for the weak hash-map topic, and Longest Substring for sliding window. Kept everything medium per the user's stated preference (recorded last run); no Easy repeats.\n- **Reconciled:** prior memory asked \"watch whether Coin Change improves\" — answered: it did not. Session 6 (Coin Change) hit Time Limit Exceeded, so the re-attempt targets bottom-up DP, not search.\n- **Open threads (next run):**\n  - 3Sum — carried again (new item 6, `carried_from` 4). Check whether it finally gets an Accepted verdict; two-pointers remains 0/1.\n  - Coin Change — re-attempt (new item 8, `carried_from` 5). Watch for the TLE pattern recurring (sign of skipping memoization/bottom-up).\n  - House Robber — session 5 was a Wrong-Answer DP attempt with `planItemId: null`, invisible to adherence. It is now planned (item 9); confirm it gets linked to a plan item this time.\n  - Group Anagrams / Longest Substring — new hash-map probes; arrays-hashing is the weakest practiced topic (25%, 1/4).\n- **Retired / resolved:** Valid Parentheses (plan 1 item 3) had a finished session with no verdict; not re-added — stack fundamentals are not the current bottleneck. Graph topic shows 0/1 but that is only Coin Change's BFS tag; the bank has no real graph problem, so no graph work is scheduled.\n- **Coaching signals:** no completed reviews exist in this instance (`reviews/pending` empty, all sessions `reviewCount: 0`) — nothing to fold in this run.\n- **Watch next run:** plan 2 adherence was 0 solved / 1 practiced / 1 not started, so engagement is the real risk — if plan 3 shows little activity, shrink the item list rather than raising difficulty. Also re-check DP solve rate (currently 33%) after Coin Change and House Robber."
+}

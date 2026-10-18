@@ -1,0 +1,47 @@
+{
+ "averages": [
+  {
+   "dim": "grounding",
+   "avg": 5,
+   "count": 4
+  },
+  {
+   "dim": "ladder_continuity",
+   "avg": 5,
+   "count": 4
+  },
+  {
+   "dim": "targeting",
+   "avg": 5,
+   "count": 4
+  },
+  {
+   "dim": "coaching",
+   "avg": 5,
+   "count": 4
+  },
+  {
+   "dim": "hygiene",
+   "avg": 5,
+   "count": 4
+  },
+  {
+   "dim": "reason_quality",
+   "avg": 5,
+   "count": 4
+  },
+  {
+   "dim": "memory",
+   "avg": 5,
+   "count": 4
+  },
+  {
+   "dim": "efficiency",
+   "avg": 5,
+   "count": 4
+  }
+ ],
+ "weakest": "grounding",
+ "filledCells": 32,
+ "totalCells": 32
+}
